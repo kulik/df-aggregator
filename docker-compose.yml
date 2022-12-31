@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  sauron:
+    container_name: kraken-map
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    hostname: kraken.host
+    ports:
+      - 8080:8080
+    volumes:
+      - "./kraken-map:/home/root/kraken-map"
+    logging:
+        driver: "json-file"
+        options:
+            max-size: "100M"
+            max-file: "3"
+    restart: always
+networks:
+  default:
+    driver: bridge
