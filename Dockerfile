@@ -3,7 +3,7 @@ ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 ENV TERM xterm
-EXPOSE 8081
+EXPOSE 8080
 
 MAINTAINER Yevgen Kulik <kxamed@gmail.com>
 USER root
